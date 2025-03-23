@@ -5,7 +5,7 @@ import './style.css'
 
 
 export default function Header() {
-  return (<div className='row '>
+  return (<div className='row'>
 <ThemeToggle/>
 <Navbar/>
     </div>
