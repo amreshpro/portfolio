@@ -18,6 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
       <body className={` p-5`} >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           {children}
