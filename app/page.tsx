@@ -1,11 +1,16 @@
 import React from 'react'
-import ThemeToggle from '@/components/theme'
+
+import Header from '@/components/header'
+import Skills from '@/components/skills'
+import './page.module.css'
 
 export default function App() {
   return (
-    <div>
-      <ThemeToggle/>
-      <h1>Amresh Maurya</h1>
+    <div className='app'>
+      <Header/>
+      <div className="content">
+      <Skills/>
+      </div>
     </div>
   )
 }

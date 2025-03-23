@@ -1,41 +1,90 @@
-*{
+@import url("/fonts/Inter-Regular.otf");
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
 }
 
-/* LIGHT THEME */
+/* 🔆 LIGHT THEME VARIABLES */
+:root {
+  --bg-color: #fcf2e6;
+  --text-color: #1a1a1a;
+  --button-bg: #ea580c;
+  --button-text: #ffffff;
+  --link-color: #f97316;
+  --link-hover: #ea580c;
+
+  /* skill box */
+  --box-bg-color: #fff9f1;
+  --box-text-color: #1a1a1a;
+  --box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+
+  /* navbar */
+  --navbar-bg: #fff9f1;
+  --navbar-text: #1a1a1a;
+  --navbar-border: #e2e8f0;
+  --navbar-accent: #ea580c;
+}
+
+/* 🌙 DARK THEME VARIABLES */
+html.dark {
+  --bg-color: #0f172a;
+  --text-color: #f8fafc;
+  --button-bg: #ea580c; /* same as light, or change if needed */
+  --button-text: #ffffff;
+  --link-color: #38bdf8;
+  --link-hover: #0ea5e9;
+
+  --box-bg-color: #1e293b;
+  --box-text-color: #f8fafc;
+  --box-shadow: 0 0 8px rgba(255, 255, 255, 0.05);
+
+  /* navbar */
+  --navbar-bg: #1e293b;
+  --navbar-text: #f8fafc;
+  --navbar-border: #1e293b;
+  --navbar-accent: #f97316;
+}
+
+
+
+
+
+
+/* 🌐 Apply Theme Colors */
 html {
-  background-color: #ffffff;
-  color: #1a1a1a;
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
-html button{
-  background-color: #ea580c;
-  color: #fff;
+html button {
+  background-color: var(--button-bg);
+  color: var(--button-text);
   border: none;
-  padding: 10px 15px ;
+  padding: 10px 15px;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 html a {
-  color: #f97316; /* Orange links */
+  color: var(--link-color);
+  text-decoration: none;
 }
 
 html a:hover {
-  color: #ea580c;
+  color: var(--link-hover);
 }
 
-/* DARK THEME */
-html.dark {
-  background-color: #0f172a;
-  color: #f8fafc;
-}
-
-html.dark a {
-  color: #38bdf8; /* Sky blue links */
-}
-
-html.dark a:hover {
-  color: #0ea5e9;
+/* Utility */
+.p-5 {
+  padding: 5px;
 }

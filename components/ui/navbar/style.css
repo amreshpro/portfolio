@@ -1,0 +1,47 @@
+/* style.css */
+
+.navbar {
+    display: flex;
+    gap: 24px;
+    padding: 16px 24px;
+    background-color: var(--navbar-bg);
+    color: var(--navbar-text);
+    border-bottom: 1px solid var(--navbar-border);
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  /* Remove underline and style links */
+  .navbar a {
+    text-decoration: none;
+    color: var(--navbar-text);
+    font-weight: 500;
+    font-size: 16px;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  
+  /* Hover underline effect */
+  .navbar a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: -4px;
+    background-color: var(--navbar-accent);
+    transition: width 0.3s ease;
+  }
+  
+  .navbar a:hover {
+    color: var(--navbar-accent);
+  }
+  
+  .navbar a:hover::after {
+    width: 100%;
+  }
+  
