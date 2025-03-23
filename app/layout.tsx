@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
+import SEOHead from "@/components/head/SEOHead";
 
 
 
@@ -18,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
+      <SEOHead/>
       <body className={` p-5`} >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           {children}
