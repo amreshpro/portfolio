@@ -36,8 +36,8 @@ export default function SEOHead() {
       <link rel="canonical" href="https://amreshmaurya.com" />
 
       {/* Favicon */}
-      <link rel="icon" href="/favicon.png" />
-
+      <link rel="icon" type="image/png" href="/favicon.png" />
+      
       {/* Keywords for SEO (optional but helpful) */}
       <meta
         name="keywords"

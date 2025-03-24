@@ -6,12 +6,13 @@ import { FaCode, FaServer, FaBrain } from "react-icons/fa";
 import { MdOutlineRocketLaunch } from "react-icons/md";
 import "./style.css";
 import Image from "next/image";
+import Title from "../ui/title";
 
 export default function About() {
   return (
     <div className="about" id="about">
       <section className="about-section">
-        <h2 className="about-heading">{AboutContent.heading}</h2>
+        <Title as="h1" className="about-heading" text={AboutContent.heading}/>
         <ul className="about-list">
           {AboutContent.highlights.map((point, index) => (
             <li key={index} className="about-list-item">

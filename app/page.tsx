@@ -6,6 +6,7 @@ import './page.module.css'
 import About from '@/components/about'
 import Contact from '@/components/contact'
 import Footer from '@/components/footer'
+import BlogList from '@/components/ui/blog-list'
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
       <div className="content">
       <About/>
       <Skills/>
+      <BlogList/>
       <Contact/>
       </div>
       <Footer/>
