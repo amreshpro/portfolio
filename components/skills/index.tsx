@@ -9,6 +9,7 @@ import {
   PROGRAMMING_LANGUAGES,
 } from "@/data/SKILLS";
 import "./style.css";
+import Title from "../ui/title";
 
 // Skill categories with their display names
 const SKILL_SECTIONS = [
@@ -21,11 +22,10 @@ const SKILL_SECTIONS = [
 export default function Skills() {
   return (
     <section className="skills-container">
-      <h1 className="skills-title">Skills</h1>
-
+      <Title text="Skills" />
       {SKILL_SECTIONS.map((section) => (
         <div key={section?.title} className="skills-section">
-          <h3 className="section-title">{section?.title}</h3>
+          <Title as="h3" text={section?.title} />
           <div className="skills-row">
             {section?.data.map((skill: SkillPropTypes) => (
               <SkillBox key={skill?.id} {...skill} />

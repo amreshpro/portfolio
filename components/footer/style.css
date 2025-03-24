@@ -1,0 +1,25 @@
+/* Footer Styles */
+
+.footer {
+    padding: 20px;
+    background-color: var(--bg-color);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: var(--text-color);
+    transition: background-color 0.3s ease;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+    font-weight: 500;
+  }
+  
+  .footer-icon {
+    color: var(--primary-color);
+    font-size: 1rem;
+  }
+  

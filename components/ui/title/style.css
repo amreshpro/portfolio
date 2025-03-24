@@ -1,0 +1,10 @@
+
+.section-title{
+color: var(--title-color);
+margin: 10px 0;
+
+}
+
+.section-title .dark{
+color: var(--title-color);
+}

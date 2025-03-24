@@ -22,6 +22,8 @@
   --button-text: #ffffff;
   --link-color: #f97316;
   --link-hover: #ea580c;
+  --title-color: #ea580c;
+
 
   /* skill box */
   --box-bg-color: #fff9f1;
@@ -43,6 +45,8 @@ html.dark {
   --button-text: #ffffff;
   --link-color: #38bdf8;
   --link-hover: #0ea5e9;
+  --title-color: #ea580c;
+
 
   --box-bg-color: #1e293b;
   --box-text-color: #f8fafc;
