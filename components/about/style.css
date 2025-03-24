@@ -1,56 +1,71 @@
 .about-section {
-    padding: 2rem;
-    max-width: 800px;
-    margin: auto;
-  }
-  
-  .about-heading {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 1.5rem;
-    color: var(--primary-heading);
-    text-align: center;
-  }
-  
-  .about-list {
-    list-style: none;
-    padding-left: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
-  }
-  
-  .about-list-item {
-    font-size: 1rem;
-    color: var(--text-color);
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-  }
-  
-  .about-icon {
-    font-size: 1.2rem;
-    color: var(--accent-color);
-  }
-  
-  .about-closing {
-    margin-top: 2rem;
-    font-style: italic;
-    text-align: center;
-    color: var(--text-color);
-  }
-  
-  /* Light mode */
-  :root {
-    --primary-heading: #1a1a1a;
-    --text-color: #333333;
-    --accent-color: #ea580c;
-  }
-  
-  /* Dark mode */
-  html.dark {
-    --primary-heading: #f8fafc;
-    --text-color: #cbd5e1;
-    --accent-color: #f97316;
-  }
-  
+padding: 20px 0 0 0;
+}
+
+.about-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--primary-heading);
+  text-align: center;
+  padding: 15px 0;
+}
+
+.about-list {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-list-item {
+  font-size: 1rem;
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  padding: 8px 0;
+}
+
+.about-icon {
+  font-size: 1.2rem;
+  color: var(--accent-color);
+  padding: 0 15px;
+}
+
+.about-closing {
+  margin-top: 2rem;
+  font-style: italic;
+  text-align: center;
+  color: var(--text-color);
+}
+
+/* Light mode */
+:root {
+  --primary-heading: #1a1a1a;
+  --text-color: #333333;
+  --accent-color: #ea580c;
+}
+
+/* Dark mode */
+html.dark {
+  --primary-heading: #f8fafc;
+  --text-color: #cbd5e1;
+  --accent-color: #f97316;
+}
+
+/* .rounded {
+  border-radius: 50%;
+} */
+.about {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap-reverse;
+  justify-content: center;
+  align-items: center;
+  /* background-color: aqua; */
+  padding: 10px 0;
+}
+
+.code-img {
+  border-radius: 100%;
+  overflow: hidden;
+}

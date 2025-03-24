@@ -21,7 +21,7 @@ const SKILL_SECTIONS = [
 
 export default function Skills() {
   return (
-    <section className="skills-container">
+    <section className="skills-container" id="skills">
       <Title text="Skills" />
       {SKILL_SECTIONS.map((section) => (
         <div key={section?.title} className="skills-section">
