@@ -22,9 +22,17 @@ export default function About() {
         </ul>
         <p className="about-closing">{AboutContent.closingNote}</p>
       </section>
-      <section className="code-img rounded">
-      <Image alt="coding-image" src={"/hero.avif"} width={240} height={240} unoptimized/>
-      </section>
+      <section className="code-img">
+  <Image 
+    alt="coding-image" 
+    src="/hero.avif" 
+    width={240} 
+    height={240} 
+    unoptimized 
+    className="hero-img"
+  />
+</section>
+
     </div>
   );
 }
