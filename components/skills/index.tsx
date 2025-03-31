@@ -5,6 +5,7 @@ import { SkillPropTypes } from "@/types";
 import {
   BACKEND_TECHNOLOGY,
   DATABASE,
+  FRONTEND_TECHNOLOGY,
   OTHER_SKILLS,
   PROGRAMMING_LANGUAGES,
 } from "@/data/SKILLS";
@@ -15,6 +16,7 @@ import Title from "../ui/title";
 const SKILL_SECTIONS = [
   { title: "Programming Languages", data: PROGRAMMING_LANGUAGES },
   { title: "Backend Technologies", data: BACKEND_TECHNOLOGY },
+  {title:"Frontend Technologies", data:FRONTEND_TECHNOLOGY},
   { title: "Databases", data: DATABASE },
   { title: "Other Skills", data: OTHER_SKILLS },
 ];

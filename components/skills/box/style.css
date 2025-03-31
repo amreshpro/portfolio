@@ -1,34 +1,74 @@
 /* box.css */
 
 .box {
-    width: 100px;
-    height: 100px;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 8px;
-    background-color: var(--box-bg-color);
-    box-shadow: var(--box-shadow);
-    transition: background-color 0.3s ease;
-  }
-  
-  .box .content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    color: var(--box-text-color);
-  }
-  
-  .box h3 {
-    margin-top: 8px;
-    font-size: 12px;
-    font-weight: 500;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 80px;
-    color: var(--box-text-color);
-  }
-  
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background-color: var(--box-bg-color);
+  box-shadow: var(--box-shadow);
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover Effects */
+.box:hover {
+  background-color: var(--box-hover-bg-color, #020a41);
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Glow Effect */
+.box:hover::before {
+  content: "";
+  position: absolute;
+  width: 140%;
+  height: 140%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 10%, transparent 80%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.box:hover::before {
+  opacity: 1;
+}
+
+/* Content Styling */
+.box .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: var(--box-text-color);
+  transition: transform 0.3s ease;
+}
+
+.box:hover .content {
+  transform: translateY(-2px);
+}
+
+/* Text Animation */
+.box h3 {
+  margin-top: 8px;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 80px;
+  color: var(--box-text-color);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.box:hover h3 {
+  opacity: 1;
+  transform: scale(1.1);
+}
