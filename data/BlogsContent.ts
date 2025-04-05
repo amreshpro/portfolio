@@ -6,7 +6,7 @@ export interface BlogType {
 }
 
 
-export const BLOGS = [
+export const BlogsArrayList = [
 
   {
     id: "spring-boot-vs-spring",

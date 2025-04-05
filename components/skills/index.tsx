@@ -3,22 +3,22 @@ import React from "react";
 import SkillBox from "./box";
 import { SkillPropTypes } from "@/types";
 import {
-  BACKEND_TECHNOLOGY,
-  DATABASE,
-  FRONTEND_TECHNOLOGY,
-  OTHER_SKILLS,
-  PROGRAMMING_LANGUAGES,
-} from "@/data/SKILLS";
+  BackendTechnologiesArrayList,
+  DatabaseArrayList,
+  FrontendTechnologiesArrayList,
+  OtherSkillsArrayList,
+  ProgrammingLanguagesArrayList,
+} from "@/data/SkillsContent";
 import "./style.css";
 import Title from "../ui/title";
 
 // Skill categories with their display names
 const SKILL_SECTIONS = [
-  { title: "Programming Languages", data: PROGRAMMING_LANGUAGES },
-  { title: "Backend Technologies", data: BACKEND_TECHNOLOGY },
-  {title:"Frontend Technologies", data:FRONTEND_TECHNOLOGY},
-  { title: "Databases", data: DATABASE },
-  { title: "Other Skills", data: OTHER_SKILLS },
+  { title: "Programming Languages", data: ProgrammingLanguagesArrayList },
+  { title: "Backend Technologies", data: BackendTechnologiesArrayList },
+  { title: "Frontend Technologies", data: FrontendTechnologiesArrayList },
+  { title: "Databases", data: DatabaseArrayList },
+  { title: "Other Skills", data: OtherSkillsArrayList },
 ];
 
 export default function Skills() {
@@ -29,7 +29,7 @@ export default function Skills() {
         <div key={section?.title} className="skills-section">
           <Title as="h3" text={section?.title} />
           <div className="skills-row">
-            {section?.data.map((skill: SkillPropTypes) => (
+            {section?.data?.map((skill: SkillPropTypes) => (
               <SkillBox key={skill?.id} {...skill} />
             ))}
           </div>

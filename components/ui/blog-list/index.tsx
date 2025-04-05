@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-import { BLOGS } from "@/data/BLOGS";
+import { BlogsArrayList } from "@/data/BlogsContent";
 import BlogItem from "../blog-item";
 import Title from "../title";
 
@@ -9,7 +9,7 @@ export default function BlogList() {
     <section className="blog-section" id="blogs">
         <Title as="h2" text="Recent Blogs"/>
       <div className="blog-list">
-        {BLOGS.map((blog) => (
+        {BlogsArrayList.map((blog) => (
           <BlogItem
             key={blog.id}
             title={blog.title}

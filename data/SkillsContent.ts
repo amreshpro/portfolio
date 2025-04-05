@@ -1,4 +1,4 @@
-export const PROGRAMMING_LANGUAGES = [
+export const ProgrammingLanguagesArrayList = [
 
   {
     id: "javapl",
@@ -20,7 +20,7 @@ export const PROGRAMMING_LANGUAGES = [
 
 ];
 
-export const FRONTEND_TECHNOLOGY = [
+export const FrontendTechnologiesArrayList = [
   {
     id: "techidnextjs",
     name: "Nextjs",
@@ -49,7 +49,7 @@ export const FRONTEND_TECHNOLOGY = [
   },
 ];
 
-export const BACKEND_TECHNOLOGY = [
+export const BackendTechnologiesArrayList = [
   {
     id: "spring-boot",
     name: "SpringBoot",
@@ -75,7 +75,7 @@ export const BACKEND_TECHNOLOGY = [
 
 ];
 
-export const SKILLS = [
+export const SkillsArrayList = [
   {
     id: "techidhtml",
     name: "HTML5",
@@ -135,7 +135,7 @@ export const SKILLS = [
 
 ];
 
-export const DATABASE = [
+export const DatabaseArrayList = [
   {
     id: "db-sql",
     name: "MySQL",
@@ -155,7 +155,7 @@ export const DATABASE = [
 
 
 
-export const OTHER_SKILLS = [
+export const OtherSkillsArrayList = [
   {
     id: "techidvscode",
     name: "VSCode",

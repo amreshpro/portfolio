@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-key */
 "use client";
 import React, { JSX } from "react";
-import { AboutContent } from "@/data/ABOUT";
+import { AboutContent } from "@/data/AboutContent";
 import { FaCode, FaServer, FaBrain } from "react-icons/fa";
 import { MdOutlineRocketLaunch } from "react-icons/md";
 import "./style.css";

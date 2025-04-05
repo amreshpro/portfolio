@@ -1,4 +1,3 @@
-// /data/AboutContent.ts
 export const AboutContent = {
     heading: "Hey, I'm Amresh 👋",
     highlights: [
