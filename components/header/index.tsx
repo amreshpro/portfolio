@@ -1,6 +1,6 @@
 import React from 'react'
 import ThemeToggle from '../theme'
-import Navbar from '../ui/navbar'
+import Navbar from '../navbar'
 import './style.css'
 
 

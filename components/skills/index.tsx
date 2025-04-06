@@ -10,7 +10,7 @@ import {
   ProgrammingLanguagesArrayList,
 } from "@/data/SkillsContent";
 import "./style.css";
-import Title from "../ui/title";
+import Title from "../title";
 
 // Skill categories with their display names
 const SKILL_SECTIONS = [

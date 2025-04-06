@@ -6,7 +6,7 @@ import { FaCode, FaServer, FaBrain } from "react-icons/fa";
 import { MdOutlineRocketLaunch } from "react-icons/md";
 import "./style.css";
 import Image from "next/image";
-import Title from "../ui/title";
+import Title from "../title";
 
 export default function About() {
   return (

@@ -2,7 +2,7 @@
 
 import { FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
 import "./style.css";
-import Title from "../ui/title";
+import Title from "../title";
 
 export default function Contact() {
   return (

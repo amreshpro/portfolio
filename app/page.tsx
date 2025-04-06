@@ -6,7 +6,8 @@ import './page.module.css'
 import About from '@/components/about'
 import Contact from '@/components/contact'
 import Footer from '@/components/footer'
-import BlogList from '@/components/ui/blog-list'
+import BlogList from '@/components/blog-list'
+import Projects from '@/components/projects'
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
       <div className="content">
       <About/>
       <Skills/>
+      <Projects/>
       <BlogList/>
       <Contact/>
       </div>
