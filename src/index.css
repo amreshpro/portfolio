@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/Inter-Regular.otf") format("otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html,
+:root {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+:root,
+[data-theme="light"] {
+  --background: #ffecf7;       /* soft sky blue (no change) */
+  --primary: #fff5f1;          /* slightly cooler than #ecf5f1 for better depth */
+  --text-color: #1a1f2e;       /* darker slate for improved readability */
+  --accent-color: #4a5a82;     /* richer, deeper accent for contrast */
+  --secondary: #ffffff;        /* for cards or container backgrounds */
+  --muted-text: #64748b;       /* use for labels, placeholder text */
+  --highlight: #dbeafe;        /* use for hover or soft highlights */
+  --border-color: #d1d5db; 
+}
+
+.dark,
+[data-theme="dark"] {
+  --background: #020617; 
+  --primary: #111827; 
+  --text-color: #d1d5db;
+  --accent-color: #1e40af; 
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text-color);
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+@layer utilities {
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-slideDown {
+    animation: slideDown 0.3s ease forwards;
+  }
+}
+
+@keyframes gradient-x {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+.animate-gradient-x {
+  animation: gradient-x 3s linear infinite;
+  background-size: 200% 200%;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+.animate-shimmer {
+  animation: shimmer 2s infinite;
+}
+.bg-grid-pattern {
+  background-image: linear-gradient(
+      to right,
+      rgba(100, 100, 255, 0.1) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(100, 100, 255, 0.1) 1px,
+      transparent 1px
+    );
+  background-size: 30px 30px;
+}
