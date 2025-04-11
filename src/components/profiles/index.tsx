@@ -1,13 +1,13 @@
 import { SiLeetcode, SiHackerrank } from "react-icons/si";
-import ProblemSolvingCard from "../ui/profile-card";
 import Title from "../ui/title";
+import ProfileCard from "../ui/profile-card";
 
 export default function Profiles() {
   return (
     <div className="profiles  flex flex-col justify-center items-center ">
       <Title as="h1" content="Problem Solving "/>
       <div className="profiles-container  flex flex-wrap justify-center items-center gap-8 my-8">
-        <ProblemSolvingCard
+        <ProfileCard
           platform="LeetCode"
           username="amreshpro"
           link="https://leetcode.com/amreshpro"
@@ -15,7 +15,7 @@ export default function Profiles() {
           stats={["Solved: 20+"]}
         />
 
-        <ProblemSolvingCard
+        <ProfileCard
           platform="HackerRank"
           username="amreshpro"
           link="https://www.hackerrank.com/amreshpro"
