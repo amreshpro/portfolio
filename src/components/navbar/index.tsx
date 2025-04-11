@@ -1,14 +1,15 @@
 import { useState } from "react";
 import { FaHome, FaLaptopCode, FaCode, FaBars } from "react-icons/fa";
 import { FaNoteSticky } from "react-icons/fa6";
-import { Link, useLocation } from "react-router-dom";
+import { Link as RouterLink, useLocation } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
 import ThemeSwitcher from "../theme-switcher";
 
 const navLinks = [
   { id: "home", icon: FaHome, text: "Home", path: "/" },
-  { id: "skills", icon: FaCode, text: "Skills", path: "#skills" },
-  { id: "projects", icon: FaLaptopCode, text: "Projects", path: "#projects" },
-  { id: "blogs", icon: FaNoteSticky, text: "Blogs", path: "#blogs" },
+  { id: "skills", icon: FaCode, text: "Skills", path: "skills" },
+  { id: "projects", icon: FaLaptopCode, text: "Projects", path: "projects" },
+  { id: "blogs", icon: FaNoteSticky, text: "Blogs", path: "blogs" },
 ];
 
 export default function Navbar() {
@@ -16,28 +17,42 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const currentPath =
-    location.pathname === "/" ? "home" : location.pathname.replace("#", "");
-
-  const handleLinkClick = () => setIsMenuOpen(false);
+    location.pathname === "/" ? "home" : location.pathname.replace("", "");
 
   const renderLinks = (isMobile = false) =>
     navLinks.map(({ id, icon: Icon, text, path }) => {
-      const isActive = currentPath === path;
-      return (
-        <Link
+      const isHome = id === "home";
+
+      const commonClasses = `cursor-pointer flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition ${
+        (isHome && currentPath === "home") || (!isHome && currentPath === `/${path}`)
+          ? "bg-[var(--accent-color)]"
+          : "text-[var(--text-color)]"
+      }`;
+
+      return isHome ? (
+        <RouterLink
           key={id}
-          to={path}
-          onClick={isMobile ? handleLinkClick : undefined}
-          className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition
-            ${
-              isActive
-                ? "bg-[var(--accent-color)] "
-                : "text-[var(--text-color)] "
-            }`}
+          to="/"
+          onClick={isMobile ? () => setIsMenuOpen(false) : undefined}
+          className={commonClasses}
         >
           <Icon className="text-base" />
           <span>{text}</span>
-        </Link>
+        </RouterLink>
+      ) : (
+        <ScrollLink
+          key={id}
+          to={path}
+          spy={true}
+          smooth={true}
+          offset={-60}
+          duration={500}
+          onClick={isMobile ? () => setIsMenuOpen(false) : undefined}
+          className={commonClasses}
+        >
+          <Icon className="text-base" />
+          <span>{text}</span>
+        </ScrollLink>
       );
     });
 
@@ -47,11 +62,11 @@ export default function Navbar() {
         <nav className="flex items-center justify-between h-16">
           <div className="left flex gap-5 justify-center items-center">
             {/* Logo */}
-            <Link to="/" className="text-xl   text-[var(--text-color)]">
+            <RouterLink to="/" className="text-xl text-[var(--text-color)]">
               <span>
                 amresh <strong>maurya</strong>
               </span>
-            </Link>
+            </RouterLink>
             <ThemeSwitcher />
           </div>
 

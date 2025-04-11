@@ -9,7 +9,7 @@
   font-style: normal;
 }
 
-html,
+html,body
 :root {
   scroll-behavior: smooth;
   margin: 0;

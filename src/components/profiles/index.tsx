@@ -4,7 +4,7 @@ import ProfileCard from "../ui/profile-card";
 
 export default function Profiles() {
   return (
-    <div className="profiles  flex flex-col justify-center items-center ">
+    <div id="profiles" className="profiles  flex flex-col justify-center items-center ">
       <Title as="h1" content="Problem Solving "/>
       <div className="profiles-container  flex flex-wrap justify-center items-center gap-8 my-8">
         <ProfileCard

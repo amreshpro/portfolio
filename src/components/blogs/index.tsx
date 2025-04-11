@@ -4,7 +4,7 @@ import Title from "../ui/title";
 
 export default function Blogs() {
   return (
-    <section id="bogs" className=" flex flex-col  items-center">
+    <section id="blogs" className=" flex flex-col  items-center">
         <Title as="h1" content="Recent Blogs" />
       <div
         className="blog-section my-8 p-4 rounded-2xl bg-[var(--primary)] max-h-[500px]  overflow-y-scroll scrollbar-thin scrollbar-thumb-blue-500 scrollbar-track-gray-200 "
