@@ -12,7 +12,7 @@ export default function Profiles() {
           username="amreshpro"
           link="https://leetcode.com/amreshpro"
           icon={<SiLeetcode />}
-          stats={["Solved: 20+"]}
+          stats={["Solved: 28+"]}
         />
 
         <ProfileCard

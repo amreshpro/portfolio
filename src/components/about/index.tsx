@@ -3,7 +3,7 @@ import Title from "../ui/title";
 
 export default function About() {
   return (
-    <div className="px-4 flex flex-col items-center">
+    <div className="px-4 py-4 flex flex-col items-center">
       <Title content="About Me" />
       <section
         id="about"
