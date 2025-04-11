@@ -37,10 +37,7 @@ export default function Contact() {
     >
       <div className="max-w-3xl  rounded-2xl p-4 bg-[var(--primary)] text-[var(--text-color)] mx-auto text-center">
         <h2 className="text-3xl font-bold mb-4">Get in Touch</h2>
-        <p className=" mb-8">
-          Have a project in mind or just want to say hi? Fill out the form or
-          connect with me below!
-        </p>
+        <p className=" mb-8">Fill out the form or connect with me below!</p>
 
         <div className="space-y-6 text-left">
           <div>

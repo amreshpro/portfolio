@@ -3,3 +3,4 @@ export default {
   EmailServiceKey: import.meta.env.VITE_EMAIL_SERVICE_ID,
   PublicKey: import.meta.env.VITE_EMAIL_PUBLIC_KEY,
 };
+
