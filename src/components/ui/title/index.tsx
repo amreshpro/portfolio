@@ -6,7 +6,7 @@ type TitleType = {
   content: string;
 };
 
-export default function Title({ className = "p-2 rounded-2xl text-center bg-[var(--primary)]", as = "h1", content='' }: TitleType) {
+export default function Title({ className = "p-2 px-4 w-fit rounded-2xl text-center bg-[var(--primary)] card-border", as = "h1", content='' }: TitleType) {
   const Tag = as;
   return <Tag className={className}>{content}</Tag>;
 }

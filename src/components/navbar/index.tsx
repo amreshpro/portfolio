@@ -29,7 +29,11 @@ export default function Navbar() {
           to={path}
           onClick={isMobile ? handleLinkClick : undefined}
           className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition
-            ${isActive ? "bg-[var(--accent-color)] " : "text-[var(--text-color)] "}`}
+            ${
+              isActive
+                ? "bg-[var(--accent-color)] "
+                : "text-[var(--text-color)] "
+            }`}
         >
           <Icon className="text-base" />
           <span>{text}</span>
@@ -38,16 +42,17 @@ export default function Navbar() {
     });
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-[var(--primary)] shadow-sm backdrop-blur-lg">
+    <header className="fixed top-0 left-0 w-full z-50 bg-white/10 backdrop-blur-lg border-b border-white/20 shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <nav className="flex items-center justify-between h-16">
           <div className="left flex gap-5 justify-center items-center">
-
-          {/* Logo */}
-          <Link to="/" className="text-xl   text-[var(--text-color)]">
-          <span>amresh <strong>maurya</strong></span>
-          </Link>
-          <ThemeSwitcher/>
+            {/* Logo */}
+            <Link to="/" className="text-xl   text-[var(--text-color)]">
+              <span>
+                amresh <strong>maurya</strong>
+              </span>
+            </Link>
+            <ThemeSwitcher />
           </div>
 
           {/* Hamburger */}
@@ -60,7 +65,9 @@ export default function Navbar() {
           </button>
 
           {/* Desktop Nav */}
-          <div className="hidden md:flex gap-4 items-center">{renderLinks()}</div>
+          <div className="hidden md:flex gap-4 items-center">
+            {renderLinks()}
+          </div>
         </nav>
 
         {/* Mobile Menu */}

@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@plugin 'tailwind-scrollbar';
+
 
 @font-face {
   font-family: "Inter";
@@ -21,25 +23,27 @@ html,
   --background: #ffecf7;       /* soft sky blue (no change) */
   --primary: #fff5f1;          /* slightly cooler than #ecf5f1 for better depth */
   --text-color: #1a1f2e;       /* darker slate for improved readability */
-  --accent-color: #4a5a82;     /* richer, deeper accent for contrast */
-  --secondary: #ffffff;        /* for cards or container backgrounds */
-  --muted-text: #64748b;       /* use for labels, placeholder text */
-  --highlight: #dbeafe;        /* use for hover or soft highlights */
+  --accent-color: #89aafd;     /* richer, deeper accent for contrast */
   --border-color: #d1d5db; 
 }
 
 .dark,
 [data-theme="dark"] {
   --background: #020617; 
-  --primary: #111827; 
+  --primary: #101828; 
   --text-color: #d1d5db;
-  --accent-color: #1e40af; 
+  --accent-color: #1f2744; 
+  --border-color:#374151;
 }
 
 body {
   background-color: var(--background);
   color: var(--text-color);
   transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.card-border{
+  border: 1px solid var(--border-color);
 }
 
 @layer utilities {
