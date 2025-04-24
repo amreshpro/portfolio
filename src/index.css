@@ -20,8 +20,8 @@ html,body
 
 :root,
 [data-theme="light"] {
-  --background: #ffecf7;       /* soft sky blue (no change) */
-  --primary: #fff5f1;          /* slightly cooler than #ecf5f1 for better depth */
+  --background: #c7cbfc;       /* soft sky blue (no change) */
+  --primary: #e2eff8;          /* slightly cooler than #ecf5f1 for better depth */
   --text-color: #1a1f2e;       /* darker slate for improved readability */
   --accent-color: #89aafd;     /* richer, deeper accent for contrast */
   --border-color: #d1d5db; 
