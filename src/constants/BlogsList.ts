@@ -1,3 +1,4 @@
+
 export interface BlogType {
     id: string;
     title: string;
@@ -7,7 +8,13 @@ export interface BlogType {
 
 
 export default [
+    {
+        id: "logger-in-go",
+        title: "Logger in Go",
+        link: "https://medium.com/@amreshpro/logger-in-go-to-the-point-c3e746076d11",
+        date: "2025-04-24"
 
+    },
     {
         id: "spring-boot-vs-spring",
         title: "Spring vs SpringBoot",
@@ -25,6 +32,6 @@ export default [
 
 
 
-    
+
 
 ];
