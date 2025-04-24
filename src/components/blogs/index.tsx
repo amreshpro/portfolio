@@ -10,7 +10,7 @@ export default function Blogs() {
         className="blog-section my-8 p-4 rounded-2xl bg-[var(--primary)] max-h-[500px]  overflow-y-scroll scrollbar-thin scrollbar-thumb-blue-500 scrollbar-track-gray-200 "
         id="blogs"
       >
-        <div className="blog-list  flex flex-col justify-center  gap-2 p-4  ">
+        <div className="blog-list card-border rounded-2xl  flex flex-col justify-center  gap-2 p-4  ">
           {BlogsList.map((blog) => (
             <BlogCard
               key={blog.id}

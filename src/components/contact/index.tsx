@@ -33,9 +33,9 @@ export default function Contact() {
       id="contact"
       ref={form}
       onSubmit={(e) => sendEmail(e)}
-      className=" p-4 py-8   "
+      className=" p-4 py-8    "
     >
-      <div className="max-w-3xl  rounded-2xl p-4 bg-[var(--primary)] text-[var(--text-color)] mx-auto text-center">
+      <div className="max-w-3xl card-border rounded-2xl p-4 bg-[var(--primary)] text-[var(--text-color)] mx-auto text-center">
         <h2 className="text-3xl font-bold mb-4">Get in Touch</h2>
         <p className=" mb-8">Fill out the form or connect with me below!</p>
 

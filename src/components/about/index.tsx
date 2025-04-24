@@ -7,7 +7,7 @@ export default function About() {
       <Title content="About Me" />
       <section
         id="about"
-        className="bg-[var(--primary)] rounded-2xl py-16 mt-4 px-4 sm:px-8 lg:px-20"
+        className="bg-[var(--primary)] card-border rounded-2xl py-16 mt-4 px-4 sm:px-8 lg:px-20"
       >
         <div className="max-w-4xl mx-auto text-center">
           <p className=" text-lg mb-8">
